@@ -1,0 +1,924 @@
+{
+  "categories": {
+    "Geography": {
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the capital of North Macedonia?",
+          "options": [
+            "Bitola",
+            "Skopje",
+            "Ohrid",
+            "Tetovo"
+          ],
+          "answer": "Skopje",
+          "difficulty": "easy"
+        },
+        {
+          "id": 2,
+          "question": "Which lake is the largest in Macedonia?",
+          "options": [
+            "Prespa Lake",
+            "Lake Ohrid",
+            "Dojran Lake",
+            "Tikves Lake"
+          ],
+          "answer": "Lake Ohrid",
+          "difficulty": "easy"
+        },
+        {
+          "id": 3,
+          "question": "What mountain range forms the border between Macedonia and Serbia?",
+          "options": [
+            "Pindus Mountains",
+            "Šar Mountains",
+            "Rhodope Mountains",
+            "Pangaea Mountains"
+          ],
+          "answer": "Šar Mountains",
+          "difficulty": "easy"
+        },
+        {
+          "id": 4,
+          "question": "Which countries border North Macedonia? (Select all that apply is NOT an option, but the answer includes multiple)",
+          "options": [
+            "Greece and Serbia",
+            "Bulgaria and Kosovo",
+            "Albania and Greece",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "difficulty": "easy"
+        },
+        {
+          "id": 5,
+          "question": "How many countries border North Macedonia?",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "answer": "5",
+          "difficulty": "easy"
+        },
+        {
+          "id": 6,
+          "question": "What is the second-largest city in Macedonia?",
+          "options": [
+            "Skopje",
+            "Bitola",
+            "Ohrid",
+            "Tetovo"
+          ],
+          "answer": "Bitola",
+          "difficulty": "easy"
+        },
+        {
+          "id": 7,
+          "question": "Which UNESCO World Heritage site is located in Macedonia?",
+          "options": [
+            "Dubrovnik Old Town",
+            "Ohrid Old Town",
+            "Kotor Bay",
+            "Mostar Bridge"
+          ],
+          "answer": "Ohrid Old Town",
+          "difficulty": "easy"
+        },
+        {
+          "id": 8,
+          "question": "What percentage of Lake Ohrid is shared with Albania?",
+          "options": [
+            "20%",
+            "40%",
+            "50%",
+            "65%"
+          ],
+          "answer": "65%",
+          "difficulty": "easy"
+        },
+        {
+          "id": 9,
+          "question": "Which river is the longest in Macedonia?",
+          "options": [
+            "Haliacmon River",
+            "Vardar River",
+            "White Drin",
+            "Black Drin"
+          ],
+          "answer": "Vardar River",
+          "difficulty": "easy"
+        },
+        {
+          "id": 10,
+          "question": "What is the lowest point in Macedonia?",
+          "options": [
+            "500m above sea level",
+            "200m above sea level",
+            "Sea level",
+            "50m below sea level"
+          ],
+          "answer": "Sea level",
+          "difficulty": "easy"
+        },
+        {
+          "id": 11,
+          "question": "Which city is known as the 'City of Pearls'?",
+          "options": [
+            "Skopje",
+            "Ohrid",
+            "Bitola",
+            "Tetovo"
+          ],
+          "answer": "Ohrid",
+          "difficulty": "easy"
+        },
+        {
+          "id": 12,
+          "question": "What is the area of North Macedonia in square kilometers?",
+          "options": [
+            "15,000",
+            "25,713",
+            "35,000",
+            "45,000"
+          ],
+          "answer": "25,713",
+          "difficulty": "easy"
+        },
+        {
+          "id": 13,
+          "question": "Which mountain is the highest in Macedonia?",
+          "options": [
+            "Baba",
+            "Korab",
+            "Desovica",
+            "Galicica"
+          ],
+          "answer": "Korab",
+          "difficulty": "easy"
+        },
+        {
+          "id": 14,
+          "question": "What is the ancient name of Lake Ohrid?",
+          "options": [
+            "Lacus Lychnitis",
+            "Lacus Pelagonicus",
+            "Lacus Macedonicus",
+            "Lacus Dardanus"
+          ],
+          "answer": "Lacus Lychnitis",
+          "difficulty": "medium"
+        },
+        {
+          "id": 15,
+          "question": "How many inhabitants does Skopje have approximately?",
+          "options": [
+            "300,000",
+            "500,000",
+            "700,000",
+            "1,000,000"
+          ],
+          "answer": "500,000",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    "History": {
+      "questions": [
+        {
+          "id": 16,
+          "question": "Who was the most famous ruler of ancient Macedonia?",
+          "options": [
+            "Alexander the Great",
+            "Philip II",
+            "Alexander I",
+            "Philip V"
+          ],
+          "answer": "Alexander the Great",
+          "difficulty": "easy"
+        },
+        {
+          "id": 17,
+          "question": "In what year did Macedonia gain independence?",
+          "options": [
+            "1990",
+            "1991",
+            "1992",
+            "1993"
+          ],
+          "answer": "1991",
+          "difficulty": "easy"
+        },
+        {
+          "id": 18,
+          "question": "Which empire ruled Macedonia for almost 500 years?",
+          "options": [
+            "Byzantine Empire",
+            "Ottoman Empire",
+            "Bulgarian Empire",
+            "Serbian Empire"
+          ],
+          "answer": "Ottoman Empire",
+          "difficulty": "easy"
+        },
+        {
+          "id": 19,
+          "question": "What was the original name of Skopje when it was founded?",
+          "options": [
+            "Kostolac",
+            "Scupi",
+            "Patrovi",
+            "Bardovci"
+          ],
+          "answer": "Scupi",
+          "difficulty": "easy"
+        },
+        {
+          "id": 20,
+          "question": "In which century was the Kutlesh Monastery built?",
+          "options": [
+            "14th century",
+            "15th century",
+            "12th century",
+            "13th century"
+          ],
+          "answer": "14th century",
+          "difficulty": "easy"
+        },
+        {
+          "id": 21,
+          "question": "Who founded the Ohrid Literary School?",
+          "options": [
+            "Clement of Ohrid",
+            "Naum of Preslav",
+            "Constantine",
+            "Methodius"
+          ],
+          "answer": "Clement of Ohrid",
+          "difficulty": "easy"
+        },
+        {
+          "id": 22,
+          "question": "What year did Alexander the Great die?",
+          "options": [
+            "323 BC",
+            "320 BC",
+            "325 BC",
+            "330 BC"
+          ],
+          "answer": "323 BC",
+          "difficulty": "easy"
+        },
+        {
+          "id": 23,
+          "question": "Which Macedonian revolutionary led the Ilinden Uprising?",
+          "options": [
+            "Goce Delcev",
+            "Pitu Guli",
+            "Todor Aleksandrov",
+            "Aleksandar Makedonski"
+          ],
+          "answer": "Goce Delcev",
+          "difficulty": "easy"
+        },
+        {
+          "id": 24,
+          "question": "In what year did the Ilinden Uprising occur?",
+          "options": [
+            "1900",
+            "1901",
+            "1903",
+            "1905"
+          ],
+          "answer": "1903",
+          "difficulty": "easy"
+        },
+        {
+          "id": 25,
+          "question": "Which Macedonian leader signed the Treaty of San Stefano in 1878?",
+          "options": [
+            "Ottoman Sultan Abdul Hamid II",
+            "Russian Tsar Alexander II",
+            "Serbian Prince Milan",
+            "Greek King George I"
+          ],
+          "answer": "Russian Tsar Alexander II",
+          "difficulty": "easy"
+        },
+        {
+          "id": 26,
+          "question": "When was North Macedonia admitted to the United Nations?",
+          "options": [
+            "1991",
+            "1992",
+            "1993",
+            "1995"
+          ],
+          "answer": "1993",
+          "difficulty": "easy"
+        },
+        {
+          "id": 27,
+          "question": "Which Macedonian emperor created the largest empire in antiquity?",
+          "options": [
+            "Philip I",
+            "Alexander the Great",
+            "Antipater",
+            "Cassander"
+          ],
+          "answer": "Alexander the Great",
+          "difficulty": "easy"
+        },
+        {
+          "id": 28,
+          "question": "What was the main religion during the Ottoman rule of Macedonia?",
+          "options": [
+            "Christianity",
+            "Islam",
+            "Judaism",
+            "Both Christianity and Islam"
+          ],
+          "answer": "Both Christianity and Islam",
+          "difficulty": "easy"
+        },
+        {
+          "id": 29,
+          "question": "Which Macedonian revolutionary organization was founded in 1893?",
+          "options": [
+            "VMRO",
+            "IMRO",
+            "TMORO",
+            "SMORO"
+          ],
+          "answer": "IMRO",
+          "difficulty": "medium"
+        },
+        {
+          "id": 30,
+          "question": "Who was the first President of independent Macedonia?",
+          "options": [
+            "Kiro Gligorov",
+            "Boris Trajkovski",
+            "Gjorge Ivanov",
+            "Stevo Pendarovski"
+          ],
+          "answer": "Kiro Gligorov",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    "Culture": {
+      "questions": [
+        {
+          "id": 31,
+          "question": "What is the main religion in Macedonia?",
+          "options": [
+            "Islam",
+            "Catholicism",
+            "Orthodox Christianity",
+            "Protestantism"
+          ],
+          "answer": "Orthodox Christianity",
+          "difficulty": "easy"
+        },
+        {
+          "id": 32,
+          "question": "Which traditional Macedonian dance is most famous?",
+          "options": [
+            "Tango",
+            "Teskoto",
+            "Waltz",
+            "Polka"
+          ],
+          "answer": "Teskoto",
+          "difficulty": "easy"
+        },
+        {
+          "id": 33,
+          "question": "What is the traditional Macedonian bread called?",
+          "options": [
+            "Lepinja",
+            "Somun",
+            "Pogača",
+            "Banitsa"
+          ],
+          "answer": "Pogača",
+          "difficulty": "easy"
+        },
+        {
+          "id": 34,
+          "question": "Which Macedonian holiday celebrates the birth of St. Clement?",
+          "options": [
+            "Christmas",
+            "Easter",
+            "St. Clement's Day",
+            "New Year"
+          ],
+          "answer": "St. Clement's Day",
+          "difficulty": "easy"
+        },
+        {
+          "id": 35,
+          "question": "What traditional instrument is central to Macedonian folk music?",
+          "options": [
+            "Guitar",
+            "Kaval",
+            "Violin",
+            "Accordion"
+          ],
+          "answer": "Kaval",
+          "difficulty": "easy"
+        },
+        {
+          "id": 36,
+          "question": "What is a traditional Macedonian dish made of pastry and cheese?",
+          "options": [
+            "Byrek",
+            "Pastrmajlija",
+            "Moussaka",
+            "Bugatsa"
+          ],
+          "answer": "Byrek",
+          "difficulty": "easy"
+        },
+        {
+          "id": 37,
+          "question": "Which traditional Macedonian festival celebrates wine?",
+          "options": [
+            "Wine Fest",
+            "Tikves Wine Festival",
+            "Macedonian Wine Days",
+            "All of the above"
+          ],
+          "answer": "Tikves Wine Festival",
+          "difficulty": "easy"
+        },
+        {
+          "id": 38,
+          "question": "What is Ajvar in Macedonian cuisine?",
+          "options": [
+            "A type of bread",
+            "A roasted red pepper spread",
+            "A traditional soup",
+            "A dessert"
+          ],
+          "answer": "A roasted red pepper spread",
+          "difficulty": "easy"
+        },
+        {
+          "id": 39,
+          "question": "Which famous Macedonian writer wrote 'Maniak'?",
+          "options": [
+            "Gligorov",
+            "Koneski",
+            "Matejovski",
+            "Karanfilovski"
+          ],
+          "answer": "Koneski",
+          "difficulty": "easy"
+        },
+        {
+          "id": 40,
+          "question": "What is Pitabrjanka?",
+          "options": [
+            "A traditional doll",
+            "A type of embroidery",
+            "A folk game",
+            "A musical instrument"
+          ],
+          "answer": "A traditional doll",
+          "difficulty": "easy"
+        },
+        {
+          "id": 41,
+          "question": "When is Macedonian Independence Day celebrated?",
+          "options": [
+            "March 8",
+            "September 8",
+            "November 8",
+            "December 8"
+          ],
+          "answer": "September 8",
+          "difficulty": "easy"
+        },
+        {
+          "id": 42,
+          "question": "What is the significance of Martenitza in Macedonian culture?",
+          "options": [
+            "A lucky charm for spring",
+            "A type of food",
+            "A holiday",
+            "Traditional clothing"
+          ],
+          "answer": "A lucky charm for spring",
+          "difficulty": "easy"
+        },
+        {
+          "id": 43,
+          "question": "Which Macedonian philosopher was a student of Plato?",
+          "options": [
+            "Aristotle",
+            "Pythagoras",
+            "Thales",
+            "Socrates"
+          ],
+          "answer": "Aristotle",
+          "difficulty": "easy"
+        },
+        {
+          "id": 44,
+          "question": "What traditional Macedonian textile is known for its patterns?",
+          "options": [
+            "Kilim",
+            "Turkish carpet",
+            "Persian rug",
+            "Greek weaving"
+          ],
+          "answer": "Kilim",
+          "difficulty": "medium"
+        },
+        {
+          "id": 45,
+          "question": "What is Tavče Gravče?",
+          "options": [
+            "A traditional dance",
+            "A beans and meat dish",
+            "A type of jewelry",
+            "A folk song"
+          ],
+          "answer": "A beans and meat dish",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    "Nature & Wildlife": {
+      "questions": [
+        {
+          "id": 46,
+          "question": "What is the national flower of Macedonia?",
+          "options": [
+            "Rose",
+            "Lily",
+            "Poppy",
+            "Daisy"
+          ],
+          "answer": "Poppy",
+          "difficulty": "easy"
+        },
+        {
+          "id": 47,
+          "question": "How many national parks does Macedonia have?",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "3",
+          "difficulty": "easy"
+        },
+        {
+          "id": 48,
+          "question": "Which national park is home to Lake Ohrid?",
+          "options": [
+            "Pelister National Park",
+            "Mavrovo National Park",
+            "Galičica National Park",
+            "Šar Mountain Park"
+          ],
+          "answer": "Galičica National Park",
+          "difficulty": "easy"
+        },
+        {
+          "id": 49,
+          "question": "What endangered bird species is found in Lake Ohrid?",
+          "options": [
+            "Eagle",
+            "Cormorant",
+            "Pelican",
+            "Stork"
+          ],
+          "answer": "Pelican",
+          "difficulty": "easy"
+        },
+        {
+          "id": 50,
+          "question": "What is the highest peak in Macedonia?",
+          "options": [
+            "Korab",
+            "Baba Mountain",
+            "Desovica",
+            "Titov Vrv"
+          ],
+          "answer": "Korab",
+          "difficulty": "easy"
+        },
+        {
+          "id": 51,
+          "question": "How many endemic fish species are in Lake Ohrid?",
+          "options": [
+            "5",
+            "10",
+            "20",
+            "30"
+          ],
+          "answer": "20",
+          "difficulty": "easy"
+        },
+        {
+          "id": 52,
+          "question": "What is the national animal of Macedonia?",
+          "options": [
+            "Wolf",
+            "Eagle",
+            "Brown Bear",
+            "Lynx"
+          ],
+          "answer": "Brown Bear",
+          "difficulty": "easy"
+        },
+        {
+          "id": 53,
+          "question": "Which forest covers the largest area in Macedonia?",
+          "options": [
+            "Pine forest",
+            "Oak forest",
+            "Beech forest",
+            "Mixed forest"
+          ],
+          "answer": "Mixed forest",
+          "difficulty": "easy"
+        },
+        {
+          "id": 54,
+          "question": "What percentage of Macedonia is covered by forests?",
+          "options": [
+            "30%",
+            "40%",
+            "50%",
+            "60%"
+          ],
+          "answer": "40%",
+          "difficulty": "easy"
+        },
+        {
+          "id": 55,
+          "question": "Which amphibian species is endemic to Lake Ohrid?",
+          "options": [
+            "Ohrid Trout",
+            "Ohrid Newt",
+            "Macedonian Frog",
+            "Alpine Salamander"
+          ],
+          "answer": "Ohrid Newt",
+          "difficulty": "easy"
+        },
+        {
+          "id": 56,
+          "question": "What is Pelister National Park famous for?",
+          "options": [
+            "Pine trees",
+            "Red pines (Molika)",
+            "Fir trees",
+            "Oak trees"
+          ],
+          "answer": "Red pines (Molika)",
+          "difficulty": "easy"
+        },
+        {
+          "id": 57,
+          "question": "How old is Lake Ohrid?",
+          "options": [
+            "1 million years",
+            "2 million years",
+            "3 million years",
+            "5 million years"
+          ],
+          "answer": "3 million years",
+          "difficulty": "easy"
+        },
+        {
+          "id": 58,
+          "question": "Which aquatic plant is used to treat water in Lake Ohrid?",
+          "options": [
+            "Water lily",
+            "Reed",
+            "Cattail",
+            "Watercress"
+          ],
+          "answer": "Reed",
+          "difficulty": "easy"
+        },
+        {
+          "id": 59,
+          "question": "What type of climate does Macedonia have?",
+          "options": [
+            "Mediterranean",
+            "Continental",
+            "Tropical",
+            "Mixed temperate and continental"
+          ],
+          "answer": "Mixed temperate and continental",
+          "difficulty": "medium"
+        },
+        {
+          "id": 60,
+          "question": "Which waterfall is the highest in Macedonia?",
+          "options": [
+            "Matka Waterfall",
+            "Boshkov Waterfall",
+            "Smolarski Waterfall",
+            "Smokovska Waterfall"
+          ],
+          "answer": "Boshkov Waterfall",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    "Modern Facts": {
+      "questions": [
+        {
+          "id": 61,
+          "question": "What is the official language of North Macedonia?",
+          "options": [
+            "Serbian",
+            "Bulgarian",
+            "Macedonian",
+            "Greek"
+          ],
+          "answer": "Macedonian",
+          "difficulty": "easy"
+        },
+        {
+          "id": 62,
+          "question": "What is the currency of North Macedonia?",
+          "options": [
+            "Euro",
+            "Dinar",
+            "Denar",
+            "Leva"
+          ],
+          "answer": "Denar",
+          "difficulty": "easy"
+        },
+        {
+          "id": 63,
+          "question": "How many inhabitants does North Macedonia have approximately?",
+          "options": [
+            "1 million",
+            "2 million",
+            "3 million",
+            "4 million"
+          ],
+          "answer": "2 million",
+          "difficulty": "easy"
+        },
+        {
+          "id": 64,
+          "question": "Which soccer team is the most successful in Macedonia?",
+          "options": [
+            "FK Vardar",
+            "FK Rabotnički",
+            "FK Partizan",
+            "FK Metalurg"
+          ],
+          "answer": "FK Vardar",
+          "difficulty": "easy"
+        },
+        {
+          "id": 65,
+          "question": "In what year did North Macedonia join the United Nations?",
+          "options": [
+            "1991",
+            "1992",
+            "1993",
+            "1995"
+          ],
+          "answer": "1993",
+          "difficulty": "easy"
+        },
+        {
+          "id": 66,
+          "question": "What is the current name of the country (as of 2019)?",
+          "options": [
+            "Macedonia",
+            "North Macedonia",
+            "Republic of Macedonia",
+            "FYROM"
+          ],
+          "answer": "North Macedonia",
+          "difficulty": "easy"
+        },
+        {
+          "id": 67,
+          "question": "When did North Macedonia join NATO?",
+          "options": [
+            "2018",
+            "2019",
+            "2020",
+            "2021"
+          ],
+          "answer": "2020",
+          "difficulty": "easy"
+        },
+        {
+          "id": 68,
+          "question": "What is the HDI (Human Development Index) ranking of Macedonia?",
+          "options": [
+            "Top 50",
+            "Top 100",
+            "Top 150",
+            "Top 200"
+          ],
+          "answer": "Top 100",
+          "difficulty": "easy"
+        },
+        {
+          "id": 69,
+          "question": "Which is the largest trading partner of Macedonia?",
+          "options": [
+            "Greece",
+            "Serbia",
+            "Germany",
+            "United States"
+          ],
+          "answer": "Germany",
+          "difficulty": "easy"
+        },
+        {
+          "id": 70,
+          "question": "What percentage of Macedonians are Orthodox Christian?",
+          "options": [
+            "65%",
+            "75%",
+            "85%",
+            "95%"
+          ],
+          "answer": "75%",
+          "difficulty": "easy"
+        },
+        {
+          "id": 71,
+          "question": "When did North Macedonia join the European Union?",
+          "options": [
+            "2018",
+            "2020",
+            "Not yet",
+            "2025"
+          ],
+          "answer": "Not yet",
+          "difficulty": "easy"
+        },
+        {
+          "id": 72,
+          "question": "What is the most popular sport in Macedonia?",
+          "options": [
+            "Basketball",
+            "Handball",
+            "Football (Soccer)",
+            "Volleyball"
+          ],
+          "answer": "Football (Soccer)",
+          "difficulty": "easy"
+        },
+        {
+          "id": 73,
+          "question": "Which Macedonian athlete won an Olympic medal in recent years?",
+          "options": [
+            "Dejan Lavrenčević",
+            "Vinko Marič",
+            "Ivanova Yordanova",
+            "Multiple"
+          ],
+          "answer": "Multiple",
+          "difficulty": "easy"
+        },
+        {
+          "id": 74,
+          "question": "What is the main export of Macedonia?",
+          "options": [
+            "Wine",
+            "Machinery",
+            "Textiles",
+            "Agricultural products"
+          ],
+          "answer": "Machinery",
+          "difficulty": "medium"
+        },
+        {
+          "id": 75,
+          "question": "How many political parties are represented in the Macedonian Parliament?",
+          "options": [
+            "5-10",
+            "10-15",
+            "15-20",
+            "20+"
+          ],
+          "answer": "15-20",
+          "difficulty": "hard"
+        }
+      ]
+    }
+  }
+}

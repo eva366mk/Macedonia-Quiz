@@ -1,0 +1,46 @@
+{
+  "highscores": [
+    {
+      "name": "Alice",
+      "score": 23,
+      "total": 25,
+      "percentage": 92.0,
+      "category": "Geography",
+      "date": "2024-02-01T10:30:00"
+    },
+    {
+      "name": "Bob",
+      "score": 20,
+      "total": 25,
+      "percentage": 80.0,
+      "category": "History",
+      "date": "2024-02-02T14:15:00"
+    },
+    {
+      "name": "Charlie",
+      "score": 22,
+      "total": 25,
+      "percentage": 88.0,
+      "category": "Culture",
+      "date": "2024-02-03T09:45:00"
+    },
+    {
+      "name": "EVA",
+      "score": 9,
+      "total": 15,
+      "percentage": 60.0,
+      "category": "Geography",
+      "points": 245,
+      "date": "2026-02-06T09:09:54.028909"
+    },
+    {
+      "name": "EVA",
+      "score": 8,
+      "total": 15,
+      "percentage": 53.333333333333336,
+      "category": "Culture",
+      "points": 285,
+      "date": "2026-02-06T09:26:06.081997"
+    }
+  ]
+}

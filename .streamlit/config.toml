@@ -1,0 +1,10 @@
+[browser]
+gatherUsageStats = false
+
+[logger]
+level = "error"
+
+[server]
+headless = true
+port = 8501
+runOnSave = true
