@@ -267,69 +267,69 @@ with st.sidebar:
             st.rerun()
     
     st.divider()
-    st.subheader("Navigation")
-    page = st.radio("Select Page", ["🏠 Home", "📚 Categories", "📝 Quiz", "🏆 Highscores"], label_visibility="collapsed")
 
-# Home Page
-if page == "🏠 Home":
-    col1, col2, col3 = st.columns(3)
-    
-    with col1:
-        st.markdown("""
-        <div class="stat-box">
-            <div class="stat-number">75</div>
-            <div class="stat-label">Questions</div>
-        </div>
-        """, unsafe_allow_html=True)
-    
-    with col2:
-        st.markdown("""
-        <div class="stat-box">
-            <div class="stat-number">5</div>
-            <div class="stat-label">Categories</div>
-        </div>
-        """, unsafe_allow_html=True)
-    
-    with col3:
-        st.markdown("""
-        <div class="stat-box">
-            <div class="stat-number">∞</div>
-            <div class="stat-label">Fun</div>
-        </div>
-        """, unsafe_allow_html=True)
-    
-    st.divider()
-    
-    st.header("Welcome to Macedonia Quiz Master! 🎓")
-    
+# Home Page Content
+col1, col2, col3 = st.columns(3)
+
+with col1:
     st.markdown("""
-    <div class="game-card">
-    Test your knowledge about <b>North Macedonia</b> with our comprehensive quiz featuring 75+ questions!
+    <div class="stat-box">
+        <div class="stat-number">75</div>
+        <div class="stat-label">Questions</div>
     </div>
     """, unsafe_allow_html=True)
+
+with col2:
+    st.markdown("""
+    <div class="stat-box">
+        <div class="stat-number">5</div>
+        <div class="stat-label">Categories</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col3:
+    st.markdown("""
+    <div class="stat-box">
+        <div class="stat-number">∞</div>
+        <div class="stat-label">Fun</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+st.divider()
+
+st.header("Welcome to Macedonia Quiz Master! 🎓")
+
+st.markdown("""
+<div class="game-card">
+Test your knowledge about <b>North Macedonia</b> with our comprehensive quiz featuring 75+ questions!
+</div>
+""", unsafe_allow_html=True)
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.subheader("📚 Categories")
+    st.write("""
+    - 🏛️ **Geography** - Capital, lakes, mountains, and borders
+    - 📚 **History** - Ancient Macedonia, Ottoman rule, and independence
+    - 🎭 **Culture** - Traditions, food, music, and holidays
+    - 🌿 **Nature & Wildlife** - National parks, flora, and fauna
+    - 🌍 **Modern Facts** - Language, currency, and contemporary information
+    """)
     
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        st.subheader("📚 Categories")
-        st.write("""
-        - 🏛️ **Geography** - Capital, lakes, mountains, and borders
-        - 📚 **History** - Ancient Macedonia, Ottoman rule, and independence
-        - 🎭 **Culture** - Traditions, food, music, and holidays
-        - 🌿 **Nature & Wildlife** - National parks, flora, and fauna
-        - 🌍 **Modern Facts** - Language, currency, and contemporary information
-        """)
-        
-        if st.button("🚀 Start Quiz", use_container_width=True, type="primary"):
-            st.switch_page("Categories")
-    
-    with col2:
-        st.subheader("🎮 How to Play")
-        st.write("""
-        1. **Choose a category** from the Categories page
-        2. **Answer all questions** in the quiz
-        3. **View your score** and performance
-        4. **Compete** on the highscores leaderboard!
+    if st.button("🚀 Start Quiz", use_container_width=True, type="primary"):
+        st.session_state.quiz_started = False
+        st.session_state.current_category = None
+        st.session_state.current_question_index = 0
+        st.session_state.user_answers = {}
+
+with col2:
+    st.subheader("🎮 How to Play")
+    st.write("""
+    1. **Choose a category** from the Categories page
+    2. **Answer all questions** in the quiz
+    3. **View your score** and performance
+    4. **Compete** on the highscores leaderboard!
         
         ### 🏅 Gamification Features
         - ⭐ Earn points for correct answers
@@ -394,15 +394,3 @@ if page == "🏠 Home":
                     <div class="stat-label">{score_entry.get('percentage', 0):.1f}%</div>
                 </div>
                 """, unsafe_allow_html=True)
-
-# Categories Page
-elif page == "📚 Categories":
-    st.switch_page("Categories")
-
-# Quiz Page
-elif page == "📝 Quiz":
-    st.switch_page("Quiz")
-
-# Highscores Page
-elif page == "🏆 Highscores":
-    st.switch_page("Highscores")
