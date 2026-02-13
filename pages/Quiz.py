@@ -271,7 +271,7 @@ st.title("📝 Quiz")
 if not st.session_state.get("quiz_started", False):
     st.warning("Please select a category from the Categories page to start the quiz!")
     if st.button("Go to Categories"):
-        st.switch_page("pages/Categories.py")
+        st.switch_page("Categories")
     st.stop()
 
 # Get category and questions
@@ -542,4 +542,4 @@ if st.session_state.quiz_finished:
         st.session_state.current_category = None
         st.session_state.current_question_index = 0
         st.session_state.user_answers = {}
-        st.switch_page("pages/Categories.py")
+        st.switch_page("Categories")

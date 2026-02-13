@@ -108,7 +108,7 @@ for idx, category in enumerate(categories):
             st.session_state.score = 0
             
             # Navigate to quiz page
-            st.switch_page("pages/Quiz.py")
+            st.switch_page("Quiz")
         
         # Show difficulty breakdown
         st.markdown(f"""

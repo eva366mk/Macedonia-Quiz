@@ -174,5 +174,5 @@ else:
     st.info("🎉 No highscores yet. Complete a quiz to be the first on the leaderboard!")
     
     if st.button("📚 Start a Quiz"):
-        st.switch_page("pages/Categories.py")
+        st.switch_page("Categories")
 
