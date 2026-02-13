@@ -1,6 +1,11 @@
 import streamlit as st
 import json
 import os
+import sys
+
+# Add parent directory to path for imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from path_helper import get_data_path
 
 st.set_page_config(
     page_title="Highscores - Macedonia Quiz Master",
@@ -61,8 +66,8 @@ st.markdown("""
 
 # Load highscores
 def load_highscores():
-    if os.path.exists("data/highscores.json"):
-        with open("data/highscores.json", "r", encoding="utf-8") as f:
+    if os.path.exists(get_data_path("highscores.json")):
+        with open(get_data_path("highscores.json"), "r", encoding="utf-8") as f:
             return json.load(f)
     return {"highscores": []}
 

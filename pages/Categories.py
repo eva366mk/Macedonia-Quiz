@@ -1,5 +1,11 @@
 import streamlit as st
 import json
+import os
+import sys
+
+# Add parent directory to path for imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from path_helper import get_data_path
 
 st.set_page_config(
     page_title="Categories - Macedonia Quiz Master",
@@ -60,7 +66,7 @@ st.markdown("""
 
 # Load questions
 def load_questions():
-    with open("data/questions.json", "r", encoding="utf-8") as f:
+    with open(get_data_path("questions.json"), "r", encoding="utf-8") as f:
         return json.load(f)
 
 st.title("📚 Select Your Category")

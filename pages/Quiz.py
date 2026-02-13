@@ -3,6 +3,11 @@ import json
 import os
 from datetime import datetime
 import time
+import sys
+
+# Add parent directory to path for imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from path_helper import get_data_path
 
 st.set_page_config(
     page_title="Quiz - Macedonia Quiz Master",
@@ -143,19 +148,19 @@ def check_achievement(score, total, category):
 
 # Load questions
 def load_questions():
-    with open("data/questions.json", "r", encoding="utf-8") as f:
+    with open(get_data_path("questions.json"), "r", encoding="utf-8") as f:
         return json.load(f)
 
 # Load highscores
 def load_highscores():
-    if os.path.exists("data/highscores.json"):
-        with open("data/highscores.json", "r", encoding="utf-8") as f:
+    if os.path.exists(get_data_path("highscores.json")):
+        with open(get_data_path("highscores.json"), "r", encoding="utf-8") as f:
             return json.load(f)
     return {"highscores": []}
 
 # Save highscores
 def save_highscores(highscores):
-    with open("data/highscores.json", "w", encoding="utf-8") as f:
+    with open(get_data_path("highscores.json"), "w", encoding="utf-8") as f:
         json.dump(highscores, f, indent=2, ensure_ascii=False)
 
 # Custom CSS with animations and yellow/red Macedonia theme

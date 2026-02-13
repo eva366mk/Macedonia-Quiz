@@ -321,7 +321,7 @@ if page == "🏠 Home":
         """)
         
         if st.button("🚀 Start Quiz", use_container_width=True, type="primary"):
-            st.switch_page("pages/Categories.py")
+            st.switch_page("Categories")
     
     with col2:
         st.subheader("🎮 How to Play")
@@ -397,12 +397,12 @@ if page == "🏠 Home":
 
 # Categories Page
 elif page == "📚 Categories":
-    st.switch_page("pages/Categories.py")
+    st.switch_page("Categories")
 
 # Quiz Page
 elif page == "📝 Quiz":
-    st.switch_page("pages/Quiz.py")
+    st.switch_page("Quiz")
 
 # Highscores Page
 elif page == "🏆 Highscores":
-    st.switch_page("pages/Highscores.py")
+    st.switch_page("Highscores")
