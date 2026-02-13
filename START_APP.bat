@@ -1,26 +1,28 @@
 @echo off
-REM Macedonia Quiz Master Launcher
-REM This batch file starts the Streamlit app automatically
-
-echo.
-echo ========================================
-echo   Macedonia Quiz Master
-echo ========================================
-echo.
-echo Starting the app...
-echo.
+title Macedonia Quiz Master
+color 0A
 
 cd /d "%~dp0"
 
-REM Check if virtual environment exists
 if not exist ".venv" (
-    echo Error: Virtual environment not found!
-    echo Please run setup first.
+    echo.
+    echo ERROR: Setup not completed!
+    echo.
+    echo Please double-click SETUP.bat first
+    echo.
     pause
     exit /b 1
 )
 
-REM Launch Streamlit
-.\.venv\Scripts\python.exe -m streamlit run Home.py --logger.level=error
+cls
+echo.
+echo ================================================
+echo   Macedonia Quiz Master 
+echo ================================================
+echo.
+echo Starting application...
+echo.
+
+.\.venv\Scripts\python.exe launcher.py
 
 pause
