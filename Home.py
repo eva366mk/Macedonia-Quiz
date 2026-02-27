@@ -273,9 +273,9 @@ def show_confetti_effect(correct=True, emoji_count=12):
     ]
 
     for i in range(emoji_count):
-        left = (i * 100 / emoji_count) + "%"
+        left = (i * 100 / emoji_count)
         emoji = emojis[i % len(emojis)]
-        html.append(f"<div class='confetti' style='left:{left};'>{emoji}</div>")
+        html.append(f"<div class='confetti' style='left:{left}%;'>{emoji}</div>")
 
     st.markdown("".join(html), unsafe_allow_html=True)
 
