@@ -214,9 +214,6 @@ def show_home():
             st.rerun()
 
 # ==================== CATEGORIES PAGE ====================
-def show_categories():
-    st.title("📚 Select Your Category")
-
 # ==================== AUDIO & ANIMATION HELPERS ====================
 def play_sound_effect(frequencies_with_delays):
     """Inject JavaScript to play a sequence of tones using Web Audio API.
@@ -282,6 +279,9 @@ def show_confetti_effect(correct=True, emoji_count=12):
 
     st.markdown("".join(html), unsafe_allow_html=True)
 
+# ==================== CATEGORIES PAGE ====================
+def show_categories():
+    st.title("📚 Select Your Category")
     
     questions_data = load_questions()
     categories = list(questions_data.get("categories", {}).keys())
@@ -307,6 +307,7 @@ def show_confetti_effect(correct=True, emoji_count=12):
             # reset celebration flag for new quiz
             st.session_state.celebrated = False
             st.rerun()
+
 
 # ==================== QUIZ PAGE ====================
 def show_quiz():
