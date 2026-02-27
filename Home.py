@@ -216,6 +216,72 @@ def show_home():
 # ==================== CATEGORIES PAGE ====================
 def show_categories():
     st.title("📚 Select Your Category")
+
+# ==================== AUDIO & ANIMATION HELPERS ====================
+def play_sound_effect(frequencies_with_delays):
+    """Inject JavaScript to play a sequence of tones using Web Audio API.
+
+    `frequencies_with_delays` is a list of tuples:
+        (frequency_hz, duration_ms, decay, delay_ms)
+
+    The function ensures a global AudioContext exists and schedules
+    oscillators with exponential gain envelopes so notes fade out
+    smoothly.  We rely on user interaction (button click) to satisfy
+    browser autoplay policies.
+    """
+    # build JS code
+    js = [
+        "<script>",
+        "if (!window.globalAudioContext) {",
+        "  window.globalAudioContext = new (window.AudioContext || window.webkitAudioContext)();",
+        "}",
+        "var ctx = window.globalAudioContext;",
+    ]
+
+    for freq, dur, decay, delay in frequencies_with_delays:
+        js.extend([
+            f"(function() {{",
+            f"  var osc = ctx.createOscillator();",
+            f"  var gain = ctx.createGain();",
+            f"  osc.frequency.setValueAtTime({freq}, ctx.currentTime + {delay/1000.0});",
+            f"  gain.gain.setValueAtTime(0.001, ctx.currentTime + {delay/1000.0});",
+            f"  gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + {delay/1000.0});",
+            f"  gain.gain.exponentialRampToValueAtTime(0.0, ctx.currentTime + {delay/1000.0} + {dur/1000.0});",
+            f"  osc.connect(gain); gain.connect(ctx.destination);",
+            f"  osc.start(ctx.currentTime + {delay/1000.0});",
+            f"  osc.stop(ctx.currentTime + {delay/1000.0} + {dur/1000.0});",
+            f"}})();",
+        ])
+
+    js.append("</script>")
+    st.markdown("\n".join(js), unsafe_allow_html=True)
+
+def show_confetti_effect(correct=True, emoji_count=12):
+    """Display a burst of falling emojis as confetti.
+
+    `correct` controls whether we use celebratory or consoling emojis,
+    and `emoji_count` tunes the intensity.
+    """
+    emojis = ["🎉", "🎊", "🎈", "✨"] if correct else ["😅", "💥", "🤦‍♂️"]
+
+    # CSS for animation (unique names to avoid collisions)
+    html = [
+        "<style>",
+        "@keyframes confetti {",
+        "  0% {transform: translateY(0) rotate(0deg);opacity:1}",
+        " 100% {transform: translateY(300px) rotate(720deg);opacity:0}",
+        "}",
+        ".confetti {position: absolute; top: 0; font-size: 24px; animation: confetti 2.5s ease-out forwards;}",
+        "</style>",
+    ]
+
+    for i in range(emoji_count):
+        left = (i * 100 / emoji_count) + "%"
+        emoji = emojis[i % len(emojis)]
+        html.append(f"<div class='confetti' style='left:{left};'>{emoji}</div>")
+
+    st.markdown("".join(html), unsafe_allow_html=True)
+
     
     questions_data = load_questions()
     categories = list(questions_data.get("categories", {}).keys())
@@ -238,6 +304,8 @@ def show_categories():
             st.session_state.quiz_started = True
             st.session_state.quiz_finished = False
             st.session_state.score = 0
+            # reset celebration flag for new quiz
+            st.session_state.celebrated = False
             st.rerun()
 
 # ==================== QUIZ PAGE ====================
@@ -286,8 +354,13 @@ def show_quiz():
                 points = calculate_points(True, question.get("difficulty", "easy"))
                 st.session_state.score += points
                 st.success(f"✅ Correct! +{points} points")
+                # correct answer celebration
+                play_sound_effect([(800, 150, 0.04, 0), (1000, 150, 0.04, 170), (1200, 300, 0.04, 340)])
+                show_confetti_effect(correct=True, emoji_count=15)
             else:
                 st.error(f"❌ Wrong! Correct answer: {question['answer']}")
+                play_sound_effect([(600, 100, 0.04, 0), (700, 100, 0.04, 120), (1000, 200, 0.04, 240), (1200, 150, 0.04, 460)])
+                show_confetti_effect(correct=False, emoji_count=6)
             
             time.sleep(1)
             st.session_state.current_question_index += 1
@@ -301,35 +374,50 @@ def show_quiz():
 
 # ==================== RESULTS PAGE ====================
 def show_results():
+    """Display the results page with optional celebration."""
+
     if not st.session_state.quiz_finished:
         st.warning("Complete a quiz first!")
         return
-    
+
     questions_data = load_questions()
     category = st.session_state.current_category
     questions = questions_data["categories"][category]
-    
-    st.title("🎉 Quiz Complete!")
-    
     score = st.session_state.score
     percentage = (score / len(questions)) / 10 * 100  # Rough calculation
     percentage = min(100, percentage)
-    
+
+    st.title("🎉 Quiz Complete!")
+
+    # one-time celebration when results are shown
+    if "celebrated" not in st.session_state:
+        if percentage >= 60:
+            play_sound_effect([
+                (880, 150, 0.04, 0),
+                (1100, 150, 0.04, 170),
+                (1320, 200, 0.04, 340),
+                (1100, 150, 0.04, 560),
+                (880, 250, 0.04, 730),
+                (1760, 100, 0.04, 1000),
+            ])
+            show_confetti_effect(correct=True, emoji_count=25)
+        st.session_state.celebrated = True
+
     col1, col2, col3 = st.columns(3)
-    
+
     with col1:
         st.metric("Your Score", f"{score} pts")
     with col2:
         st.metric("Correct Answers", len([a for i, a in st.session_state.user_answers.items() if i < len(questions) and a == questions[i]["answer"]]))
     with col3:
         st.metric("Grade", get_grade_emoji(percentage))
-    
+
     st.divider()
-    
+
     # Save to leaderboard
     highscores_data = load_highscores()
     name = st.text_input("Enter your name for the leaderboard:")
-    
+
     if st.button("💾 Save to Leaderboard"):
         if name:
             highscores_data["highscores"].append({
@@ -343,7 +431,10 @@ def show_results():
             highscores_data["highscores"] = highscores_data["highscores"][:10]
             save_highscores(highscores_data)
             st.success(f"✅ {name} saved to leaderboard!")
-    
+            # epic save celebration
+            play_sound_effect([(1047, 100, 0.04, 0), (1319, 100, 0.04, 120), (1567, 150, 0.04, 240)])
+            show_confetti_effect(correct=True, emoji_count=25)
+
     if st.button("🏠 Back to Home"):
         st.session_state.page = "Home"
         st.session_state.quiz_finished = False
