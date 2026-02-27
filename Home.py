@@ -294,7 +294,7 @@ def show_categories():
     st.divider()
     
     for idx, category in enumerate(categories):
-        cat_data = questions_data["categories"][category]
+        cat_data = questions_data["categories"][category].get("questions", [])
         num_questions = len(cat_data)
         
         if st.button(f"{category}\n({num_questions} Questions)", use_container_width=True, key=f"cat_{idx}"):
@@ -321,10 +321,10 @@ def show_quiz():
         return
     
     category = st.session_state.current_category
-    questions = questions_data["categories"][category]
+    questions = questions_data["categories"][category].get("questions", [])
     current_idx = st.session_state.current_question_index
     
-    if current_idx >= len(questions):
+    if not questions or current_idx >= len(questions):
         # Quiz completed
         st.session_state.quiz_finished = True
         st.session_state.quiz_started = False
@@ -383,7 +383,7 @@ def show_results():
 
     questions_data = load_questions()
     category = st.session_state.current_category
-    questions = questions_data["categories"][category]
+    questions = questions_data["categories"][category].get("questions", [])
     score = st.session_state.score
     percentage = (score / len(questions)) / 10 * 100  # Rough calculation
     percentage = min(100, percentage)
